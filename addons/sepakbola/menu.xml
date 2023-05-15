@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+    <!-- action Club -->
+        <record id = "action_club_list" model="ir.actions.act_window"> <!-- Sudah bawaan Odoo -->
+            <field name="name">Daftar Club</field> <!-- ini terserah/tentukan sendiri -->
+            <field name="type">ir.actions.act_window</field> <!-- Sudah bawaan Odoo -->
+            <field name="res_model">sepakbola.club</field> <!-- model yang kita buat di club.py -->
+            <field name="view_mode">tree,form</field> <!-- Sudah bawaan Odoo -->
+            <field name="help" type="html"> <!-- Sudah bawaan Odoo -->
+                <p class = "oe_view_nocontent_create">
+                Klik untuk menambah data Club
+                </p>
+                <p>
+                Klik tombol create untuk membuat Club baru
+                </p>
+            </field>
+        </record>
+    <!-- action Club -->
+    
+	<!-- action Pemain -->
+        <record id = "action_pemain_list" model="ir.actions.act_window"> <!-- Sudah bawaan Odoo -->
+            <field name="name">Daftar Pemain</field> <!-- ini terserah/tentukan sendiri -->
+            <field name="type">ir.actions.act_window</field> <!-- Sudah bawaan Odoo -->
+            <field name="res_model">sepakbola.pemain</field> <!-- model yang kita buat di club.py -->
+            <field name="view_mode">tree,form</field> <!-- Sudah bawaan Odoo -->
+            <field name="help" type="html"> <!-- Sudah bawaan Odoo -->
+                <p class = "oe_view_nocontent_create">
+                Klik untuk menambah data Pemain
+                </p>
+                <p>
+                Klik tombol create untuk membuat Pemain baru
+                </p>
+            </field>
+        </record>
+    <!-- action Pemain -->
+	
+	<!-- action Istri -->
+        <record id = "action_istri_list" model="ir.actions.act_window"> <!-- Sudah bawaan Odoo -->
+            <field name="name">Daftar Istri</field> <!-- ini terserah/tentukan sendiri -->
+            <field name="type">ir.actions.act_window</field> <!-- Sudah bawaan Odoo -->
+            <field name="res_model">sepakbola.istri</field> <!-- model yang kita buat di Istri.py -->
+            <field name="view_mode">tree,form</field> <!-- Sudah bawaan Odoo -->
+            <field name="help" type="html"> <!-- Sudah bawaan Odoo -->
+                <p class = "oe_view_nocontent_create">
+                Klik untuk menambah data Istri Pemain
+                </p>
+                <p>
+                Klik tombol create untuk membuat Istri Pemain baru
+                </p>
+            </field>
+        </record>
+    <!-- action Istri -->
+    
+        <menuitem id="sepakbola_0" name="Sepakbola" sequence="30" />
+        <menuitem id="sepakbola_1" groups="base.group_user" name="All About Sepakbola" parent="sepakbola_0" sequence="30" />
+        <menuitem id="menu_sepakbola_club" groups="base.group_user" name="Club" parent="sepakbola_1" action="action_club_list" sequence="30" />
+        <menuitem id="menu_sepakbola_pemain" groups="base.group_user" name="Pemain" parent="sepakbola_1" action="action_pemain_list" sequence="30" />
+		<menuitem id="menu_istri_pemain" groups="base.group_user" name="Istri" parent="sepakbola_1" action="action_istri_list" sequence="30" />
+
+    </data>
+</odoo>

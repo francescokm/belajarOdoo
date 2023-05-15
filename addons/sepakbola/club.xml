@@ -1,0 +1,18 @@
+<odoo>
+<data>
+<!-- tree view utk module course -->
+<record id = "view_sepakbola_club_tree" model="ir.ui.view">
+    <field name="name">sepakbola.club.tree</field>
+    <field name="model">sepakbola.club</field>
+    <field name="type">tree</field>
+    <field name="arch" type="xml">
+        <tree string="Club">
+            <field name="nama"/>
+			<field name="kota"/>
+            <field name="alamat"/>
+        </tree>        
+    </field>    
+</record>
+
+</data>
+</odoo>
